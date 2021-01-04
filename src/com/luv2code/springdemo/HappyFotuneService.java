@@ -9,6 +9,7 @@ public class HappyFotuneService implements FortuneService {
 	public String getFortune() {
 		
 		return "today is your lucky day";
+		
 	}
 
 }
