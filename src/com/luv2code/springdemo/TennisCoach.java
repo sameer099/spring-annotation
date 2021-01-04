@@ -8,9 +8,23 @@ public class TennisCoach implements Coach {
 
 	private FortuneService fortuneService;
 	
+//	@Autowired
+//	public TennisCoach(FortuneService theFortuneService) {
+//		fortuneService=theFortuneService;
+//	}
+	
+	
+	//default constructor
+	public TennisCoach() {
+		System.out.println(">>>TennisCoach: inside the default constructor");
+	}
+	
+	
+	//define setter function
 	@Autowired
-	public TennisCoach(FortuneService theFortuneService) {
-		fortuneService=theFortuneService;
+	public void setFortuneService(FortuneService fortuneService) {
+		System.out.println(">>>TennisCoach: inside the setFortuneService()");
+		this.fortuneService = fortuneService;
 	}
 	
 	@Override
@@ -18,6 +32,9 @@ public class TennisCoach implements Coach {
 		
 		return "Practice serves above speed of 140mph";
 	}
+
+	
+
 
 	@Override
 	public String getDailyFortune() {
